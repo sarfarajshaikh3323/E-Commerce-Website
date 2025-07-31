@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="scroll-smooth">
+    <header class="shadow-md border-b bg-white sticky top-0 z-50">
+        <div class="flex items-center justify-between h-20 max-w-7xl mx-auto px-6 md:px-12">
+
+            <!-- Logo & Title -->
+            <div class="flex items-center gap-4">
+                <img src="image/Meubel House_Logos-05.png" alt="Logo" class="h-10 w-auto" />
+                <h1 class="text-2xl md:text-4xl font-bold text-gray-800">Furniro</h1>
+            </div>
+
+            <!-- Hamburger Icon (Mobile only) -->
+            <div class="md:hidden">
+                <img src="svg/hamburger.svg" alt="Menu" class="h-8 cursor-pointer" onclick="onToggle()" />
+            </div>
+
+            <!-- Navigation Menu (Desktop) -->
+            <nav class="hidden md:flex gap-10 text-lg font-semibold text-gray-700">
+                <a href="#home" class="hover:text-gray-900">Home</a>
+                <a href="#shop" class="hover:text-gray-900">Shop</a>
+                <a href="#about" class="hover:text-gray-900">About</a>
+                <a href="#contact" class="hover:text-gray-900">Contact</a>
+            </nav>
+
+            <!-- Icons (Desktop only) -->
+            <div class="hidden md:flex gap-6 items-center">
+                <img src="image/mdi_account-alert-outline.png" alt="Account" class="h-6" />
+                <img src="image/akar-icons_search.png" alt="Search" class="h-6" />
+                <img src="image/akar-icons_heart.png" alt="Wishlist" class="h-6" />
+                <img src="image/ant-design_shopping-cart-outlined.png" alt="Cart" class="h-6" />
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="myBox"
+            class="md:hidden fixed top-0 left-[-100%] w-full h-full bg-black bg-opacity-90 z-40 transition-all duration-300 ease-in-out">
+            <div class="flex flex-col items-center justify-center h-full gap-10 text-white text-2xl font-bold">
+                <a href="#home" onclick="onToggle()">Home</a>
+                <a href="#shop" onclick="onToggle()">Shop</a>
+                <a href="#about" onclick="onToggle()">About</a>
+                <a href="#contact" onclick="onToggle()">Contact</a>
+                <a href="#blog" onclick="onToggle()">Blog</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="w-full" id="home">
+        <div class="relative w-full h-auto md:h-[600px] bg-cover bg-center flex items-center justify-end"
+            style="background-image: url('image/scandinavian-interior-mockup-wall-decal-background\ 1.png')">
+
+            <div
+                class="form bg-[#FFF3E3] w-[90%] md:w-[600px] py-10 px-6 md:px-10 mx-4 md:mx-20 rounded-xl flex flex-col items-start justify-center">
+                <p class="text-sm md:text-lg font-semibold">New Arrival</p>
+                <h1 class="text-3xl md:text-5xl font-bold text-[#B88E2F] pt-6">Discover Our <br /> New Collection</h1>
+                <p class="text-sm md:text-base py-6">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
+                    mattis.
+                </p>
+                <button class="px-6 py-3 bg-[#B88E2F] text-white font-semibold rounded">BUY NOW</button>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <section>
+        <div class="title flex flex-col justify-center items-center">
+            <h1 class="text-6xl font-bold pt-20 px-10">Browse The Range</h1>
+            <p class="text-lg py-5 px-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="box flex justify-center items-center gap-10 p-10 flex-col md:flex-row">
+            <div class="card md:w-[381px]">
+                <img src="image/Mask Group.png" alt="">
+                <h2 class="py-5 text-4xl font-bold text-center">Dining</h2>
+            </div>
+
+
+            <div class="card md:w-[381px]">
+                <img src="image/Image-living room.png" alt="">
+                <h2 class="py-5 text-4xl font-bold text-center">Living</h2>
+            </div>
+
+
+            <div class="card md:w-[381px]">
+                <img src="image/bed.png" alt="">
+                <h2 class="py-5 text-4xl font-bold text-center">Bedroom</h2>
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <section id="shop" class="py-20 bg-[#F5F5F5]">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-800">Our Products</h1>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 px-6 md:px-12">
+
+            <!-- Product Card Start -->
+            <div class="relative group bg-white rounded-lg shadow hover:shadow-xl transition-all overflow-hidden">
+                <span
+                    class="absolute top-3 left-3 bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded-full z-10">-30%</span>
+                <div class="h-[240px] flex items-center justify-center overflow-hidden bg-[#F4F5F7]">
+                    <img src="image/image 1@2x.png" alt="Pingky"
+                        class="h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                </div>
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-center items-center space-y-4">
+                    <button class="bg-white text-black font-semibold px-4 py-2 rounded hover:bg-gray-100">Add to
+                        cart</button>
+                    <div class="flex gap-4 text-white text-sm">
+                        <span class="hover:underline cursor-pointer">&lt; Share</span>
+                        <span class="hover:underline cursor-pointer">Compare</span>
+                        <span class="hover:underline cursor-pointer">Like &gt;</span>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <h2 class="text-xl font-bold mb-1">Syltherine</h2>
+                    <p class="text-sm text-gray-500">Stylish cafe chair</p>
+                    <div class="mt-4">
+                        <p class="text-lg font-bold text-black">Rp 2,500.000</p>
+                        <p class="line-through text-gray-400 text-sm">Rp 3,500.000</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="relative group bg-white rounded-lg shadow hover:shadow-xl transition-all overflow-hidden">
+                <!-- Badge -->
+                <span
+                    class="absolute top-3 left-3 bg-green-500 text-white text-xs font-semibold px-2 py-1 rounded-full z-10">New</span>
+
+                <!-- Image -->
+                <div class="h-[240px] flex items-center justify-center overflow-hidden bg-[#F4F5F7]">
+                    <img src="image/image 2.png" alt="Syltherine"
+                        class="h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                </div>
+
+                <!-- Hover Overlay -->
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-center items-center space-y-4">
+                    <button class="bg-white text-black font-semibold px-4 py-2 rounded hover:bg-gray-100">Add to
+                        cart</button>
+                    <div class="flex gap-4 text-white text-sm">
+                        <span class="hover:underline cursor-pointer">&lt; Share</span>
+                        <span class="hover:underline cursor-pointer">Compare</span>
+                        <span class="hover:underline cursor-pointer">Like &gt;</span>
+                    </div>
+                </div>
+
+                <!-- Details -->
+                <div class="p-5">
+                    <h2 class="text-xl font-bold mb-1">Leviosa</h2>
+                    <p class="text-sm text-gray-500">Stylish cafe chair</p>
+                    <div class="mt-4">
+                        <p class="text-lg font-bold text-black">Rp 2.500.000</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="relative group bg-white rounded-lg shadow hover:shadow-xl transition-all overflow-hidden">
+                <span
+                    class="absolute top-3 left-3 bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded-full z-10">-50%</span>
+                <div class="h-[240px] flex items-center justify-center overflow-hidden bg-[#F4F5F7]">
+                    <img src="image/image 3.png" alt="Pingky"
+                        class="h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                </div>
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-center items-center space-y-4">
+                    <button class="bg-white text-black font-semibold px-4 py-2 rounded hover:bg-gray-100">Add to
+                        cart</button>
+                    <div class="flex gap-4 text-white text-sm">
+                        <span class="hover:underline cursor-pointer">&lt; Share</span>
+                        <span class="hover:underline cursor-pointer">Compare</span>
+                        <span class="hover:underline cursor-pointer">Like &gt;</span>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <h2 class="text-xl font-bold mb-1">Lolito</h2>
+                    <p class="text-sm text-gray-500">Luxary big sofa</p>
+                    <div class="mt-4">
+                        <p class="text-lg font-bold text-black">Rp 7.000.000</p>
+                        <p class="line-through text-gray-400 text-sm">Rp 14.000.000</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="relative group bg-white rounded-lg shadow hover:shadow-xl transition-all overflow-hidden">
+                <!-- Badge -->
+                <span
+                    class="absolute top-3 left-3 bg-green-500 text-white text-xs font-semibold px-2 py-1 rounded-full z-10">New</span>
+
+                <!-- Image -->
+                <div class="h-[240px] flex items-center justify-center overflow-hidden bg-[#F4F5F7]">
+                    <img src="image/image 4.png" alt="Syltherine"
+                        class="h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                </div>
+
+                <!-- Hover Overlay -->
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-center items-center space-y-4">
+                    <button class="bg-white text-black font-semibold px-4 py-2 rounded hover:bg-gray-100">Add to
+                        cart</button>
+                    <div class="flex gap-4 text-white text-sm">
+                        <span class="hover:underline cursor-pointer">&lt; Share</span>
+                        <span class="hover:underline cursor-pointer">Compare</span>
+                        <span class="hover:underline cursor-pointer">Like &gt;</span>
+                    </div>
+                </div>
+
+                <!-- Details -->
+                <div class="p-5">
+                    <h2 class="text-xl font-bold mb-1">Respira</h2>
+                    <p class="text-sm text-gray-500">Outdoor bar table and stool</p>
+                    <div class="mt-4">
+                        <p class="text-lg font-bold text-black">Rp 500.000</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="relative group bg-white rounded-lg shadow hover:shadow-xl transition-all overflow-hidden">
+                <!-- Badge -->
+                <span
+                    class="absolute top-3 left-3 bg-green-500 text-white text-xs font-semibold px-2 py-1 rounded-full z-10">New</span>
+
+                <!-- Image -->
+                <div class="h-[240px] flex items-center justify-center overflow-hidden bg-[#F4F5F7]">
+                    <img src="image/image 5.png" alt="Syltherine"
+                        class="h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                </div>
+
+                <!-- Hover Overlay -->
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-center items-center space-y-4">
+                    <button class="bg-white text-black font-semibold px-4 py-2 rounded hover:bg-gray-100">Add to
+                        cart</button>
+                    <div class="flex gap-4 text-white text-sm">
+                        <span class="hover:underline cursor-pointer">&lt; Share</span>
+                        <span class="hover:underline cursor-pointer">Compare</span>
+                        <span class="hover:underline cursor-pointer">Like &gt;</span>
+                    </div>
+                </div>
+
+                <!-- Details -->
+                <div class="p-5">
+                    <h2 class="text-xl font-bold mb-1">Grifo</h2>
+                    <p class="text-sm text-gray-500">Night lamp</p>
+                    <div class="mt-4">
+                        <p class="text-lg font-bold text-black">Rp 1,500.000</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="relative group bg-white rounded-lg shadow hover:shadow-xl transition-all overflow-hidden">
+                <!-- Badge -->
+                <span
+                    class="absolute top-3 left-3 bg-green-500 text-white text-xs font-semibold px-2 py-1 rounded-full z-10">New</span>
+
+                <!-- Image -->
+                <div class="h-[240px] flex items-center justify-center overflow-hidden bg-[#F4F5F7]">
+                    <img src="image/image 2.png" alt="Syltherine"
+                        class="h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                </div>
+
+                <!-- Hover Overlay -->
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-center items-center space-y-4">
+                    <button class="bg-white text-black font-semibold px-4 py-2 rounded hover:bg-gray-100">Add to
+                        cart</button>
+                    <div class="flex gap-4 text-white text-sm">
+                        <span class="hover:underline cursor-pointer">&lt; Share</span>
+                        <span class="hover:underline cursor-pointer">Compare</span>
+                        <span class="hover:underline cursor-pointer">Like &gt;</span>
+                    </div>
+                </div>
+
+                <!-- Details -->
+                <div class="p-5">
+                    <h2 class="text-xl font-bold mb-1">Muggo</h2>
+                    <p class="text-sm text-gray-500">Small mug</p>
+                    <div class="mt-4">
+                        <p class="text-lg font-bold text-black">Rp 150.000</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="relative group bg-white rounded-lg shadow hover:shadow-xl transition-all overflow-hidden">
+                <span
+                    class="absolute top-3 left-3 bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded-full z-10">-50%</span>
+                <div class="h-[240px] flex items-center justify-center overflow-hidden bg-[#F4F5F7]">
+                    <img src="image/image 7.png" alt="Pingky"
+                        class="h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                </div>
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-center items-center space-y-4">
+                    <button class="bg-white text-black font-semibold px-4 py-2 rounded hover:bg-gray-100">Add to
+                        cart</button>
+                    <div class="flex gap-4 text-white text-sm">
+                        <span class="hover:underline cursor-pointer">&lt; Share</span>
+                        <span class="hover:underline cursor-pointer">Compare</span>
+                        <span class="hover:underline cursor-pointer">Like &gt;</span>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <h2 class="text-xl font-bold mb-1">Pingky</h2>
+                    <p class="text-sm text-gray-500">Cute bed set</p>
+                    <div class="mt-4">
+                        <p class="text-lg font-bold text-black">Rp 7.000.000</p>
+                        <p class="line-through text-gray-400 text-sm">Rp 14.000.000</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="relative group bg-white rounded-lg shadow hover:shadow-xl transition-all overflow-hidden">
+                <!-- Badge -->
+                <span
+                    class="absolute top-3 left-3 bg-green-500 text-white text-xs font-semibold px-2 py-1 rounded-full z-10">New</span>
+
+                <!-- Image -->
+                <div class="h-[240px] flex items-center justify-center overflow-hidden bg-[#F4F5F7]">
+                    <img src="image/image 8 (1).png" alt="Syltherine"
+                        class="h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                </div>
+
+                <!-- Hover Overlay -->
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-center items-center space-y-4">
+                    <button class="bg-white text-black font-semibold px-4 py-2 rounded hover:bg-gray-100">Add to
+                        cart</button>
+                    <div class="flex gap-4 text-white text-sm">
+                        <span class="hover:underline cursor-pointer">&lt; Share</span>
+                        <span class="hover:underline cursor-pointer">Compare</span>
+                        <span class="hover:underline cursor-pointer">Like &gt;</span>
+                    </div>
+                </div>
+
+                <!-- Details -->
+                <div class="p-5">
+                    <h2 class="text-xl font-bold mb-1">Potty</h2>
+                    <p class="text-sm text-gray-500">Minimalist flower pot</p>
+                    <div class="mt-4">
+                        <p class="text-lg font-bold text-black">Rp 500.000</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Add more cards as needed -->
+        </div>
+
+        <!-- Show More Button -->
+        <div class="mt-12 text-center">
+            <button class="px-6 py-3 border border-yellow-500 text-yellow-600 rounded hover:bg-yellow-50 transition">
+                Show More
+            </button>
+        </div>
+    </section>
+
+
+
+
+    <section id="about"
+        class="bg-[#FCF8F3] p-10 my-10 flex justify-center md:w-full w-screen items-center gap-20 flex-col md:flex-row">
+        <div class="title">
+            <h1 class="text-4xl font-bold">50+ Beautiful rooms <br>
+                inspiration</h1>
+            <p class="text-lg py-5">Our designer already made a lot of beautiful <br> prototipe of rooms that inspire
+                you</p>
+            <button class="text-white bg-[#B88E2F] p-3 px-5">Explore More</button>
+        </div>
+        <div class="image">
+            <img src="image/Rectangle 24.png" alt="">
+        </div>
+    </section>
+
+
+
+    <section class="py-20 bg-gray-50">
+        <div class="text-center mb-16">
+            <p class="text-2xl font-medium text-gray-500">Share your setup with</p>
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mt-2">#FuniroFurniture</h1>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <!-- Repeat this image block for each image -->
+            <div
+                class="overflow-hidden rounded-xl shadow-md transition-transform hover:scale-105 duration-300 bg-white">
+                <img src="image/Rectangle 36.png" alt="" class="w-full h-64 object-cover" />
+            </div>
+            <div
+                class="overflow-hidden rounded-xl shadow-md transition-transform hover:scale-105 duration-300 bg-white">
+                <img src="image/Rectangle 37.png" alt="" class="w-full h-64 object-cover" />
+            </div>
+            <div
+                class="overflow-hidden rounded-xl shadow-md transition-transform hover:scale-105 duration-300 bg-white">
+                <img src="image/Rectangle 38.png" alt="" class="w-full h-64 object-cover" />
+            </div>
+            <div
+                class="overflow-hidden rounded-xl shadow-md transition-transform hover:scale-105 duration-300 bg-white">
+                <img src="image/Rectangle 39.png" alt="" class="w-full h-64 object-cover" />
+            </div>
+            <div
+                class="overflow-hidden rounded-xl shadow-md transition-transform hover:scale-105 duration-300 bg-white">
+                <img src="image/Rectangle 40.png" alt="" class="w-full h-64 object-cover" />
+            </div>
+            <div
+                class="overflow-hidden rounded-xl shadow-md transition-transform hover:scale-105 duration-300 bg-white">
+                <img src="image/Rectangle 41.png" alt="" class="w-full h-64 object-cover" />
+            </div>
+            <div
+                class="overflow-hidden rounded-xl shadow-md transition-transform hover:scale-105 duration-300 bg-white">
+                <img src="image/Rectangle 43.png" alt="" class="w-full h-64 object-cover" />
+            </div>
+            <div
+                class="overflow-hidden rounded-xl shadow-md transition-transform hover:scale-105 duration-300 bg-white">
+                <img src="image/Rectangle 44.png" alt="" class="w-full h-64 object-cover" />
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <footer class="bg-white px-6 md:px-20 pt-20 text-gray-700">
+        <div class="flex flex-col md:flex-row justify-between gap-12 md:gap-20 pb-12 border-b">
+
+            <!-- Brand & Address -->
+            <div class="max-w-xs">
+                <h1 class="text-4xl font-bold text-gray-800">Funiro.</h1>
+                <p class="mt-6 text-gray-500 leading-relaxed">
+                    400 University Drive Suite 200 <br />
+                    Coral Gables, <br />
+                    FL 33134 USA
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-lg font-semibold text-gray-600 mb-4">Links</h3>
+                <ul class="space-y-3">
+                    <li><a href="#" class="hover:underline">Home</a></li>
+                    <li><a href="#" class="hover:underline">Shop</a></li>
+                    <li><a href="#" class="hover:underline">About</a></li>
+                    <li><a href="#" class="hover:underline">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Help Links -->
+            <div>
+                <h3 class="text-lg font-semibold text-gray-600 mb-4">Help</h3>
+                <ul class="space-y-3">
+                    <li><a href="#" class="hover:underline">Payment Options</a></li>
+                    <li><a href="#" class="hover:underline">Returns</a></li>
+                    <li><a href="#" class="hover:underline">Privacy Policies</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="w-full md:max-w-xs">
+                <h3 class="text-lg font-semibold text-gray-600 mb-4">Newsletter</h3>
+                <form action="#" class="flex flex-col gap-4">
+                    <input type="email" placeholder="Enter your email address"
+                        class="border-b border-gray-400 focus:outline-none py-2 placeholder:text-gray-400 text-gray-700" />
+                    <button type="submit"
+                        class="text-md font-semibold text-gray-800 underline hover:text-black">SUBSCRIBE</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="py-6 text-center text-gray-500 text-sm">
+            &copy; 2023 Funiro. All rights reserved.
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
